@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cotação do Dólar</title>
+</head>
+<body>
+    <h1>Cotação do Dólar</h1>
+
+    {% if dados.erro %}
+        <p style="color: red;">Erro: {{ dados.erro }}</p>
+    {% else %}
+        <p>Cotação atual do Dólar: <strong>R$ {{ dados.cotacao | round(2) }}</strong></p>
+        <p>Variação percentual: <strong>{{ dados.variacao | round(2) }}%</strong></p>
+    {% endif %}
+</body>
+</html>
